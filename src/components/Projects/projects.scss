@@ -2,7 +2,19 @@
   padding: 20px 0;
   border-bottom: 1px solid var(--stroke-black);
 
-  &:first-child {
+  &:first-of-type {
     border-top: 1px solid var(--stroke-black);
   }
+}
+
+.description-wrapper {
+  width: 50%;
+}
+
+.project-type {
+  margin: 0 110px 0 0;
+}
+
+.main-color {
+  color: var(--main);
 }

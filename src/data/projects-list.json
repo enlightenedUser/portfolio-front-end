@@ -2,11 +2,73 @@
   {
     "title": "Nimbus platform app",
     "projectType": "Team project",
-    "projectTechnology": "React / Solidity"
+    "projectTechnology": "React / Solidity",
+    "url": "https://app.nimbusplatform.io/"
   },
   {
     "title": "NFT Marketplace",
     "projectType": "Team project",
-    "projectTechnology": "React / Solidity"
+    "projectTechnology": "React / Solidity",
+    "url": "https://nft-marketplace.ioalabs.com/"
+  },
+  {
+    "title": "Nimbus Registration Affiliate Program",
+    "projectType": "Team project",
+    "projectTechnology": "React / Solidity",
+    "url": "https://land.nimbusplatform.io/"
+  },
+  {
+    "title": "Jupiter Exchange",
+    "projectType": "Team project",
+    "projectTechnology": "HTML / CSS / JS",
+    "url": "https://jupiterexchange.com/"
+  },
+  {
+    "title": "Nimbus platform Land",
+    "projectType": "Team project",
+    "projectTechnology": "HTML / CSS / JS",
+    "url": "https://nimbusplatform.io/"
+  },
+  {
+    "title": "Nimbus platform",
+    "projectType": "Team project",
+    "projectTechnology": "React / Solidity",
+    "url": "https://leader.nimbusplatform.io/"
+  },
+  {
+    "title": "Golden Ark",
+    "projectType": "Team project",
+    "projectTechnology": "HTML /  CSS / JS / React",
+    "url": "https://goldenark.com/"
+  },
+  {
+    "title": "Phone Book",
+    "projectType": "Study  project",
+    "projectTechnology": "React",
+    "url": "https://pavelbulaienko.github.io/goit-react-hw-09-phonebook/"
+  },
+  {
+    "title": "Optomodno",
+    "projectType": "Team project",
+    "projectTechnology": "JS  / Wordpress / PHP",
+    "url": "https://optommodno.com/"
+  },
+  {
+    "title": "Fermata Studio",
+    "projectType": "Team project",
+    "projectTechnology": "JS  / Wordpress / PHP",
+    "url": "http://fermatastudio.com.ua/"
+  },
+  {
+    "title": "Web studio",
+    "projectType": "Study  project",
+    "projectTechnology": "HTML / СSS",
+    "url": "https://pavelbulaienko.github.io/goit-markup-hw-08/"
+  },
+  {
+    "title": "Icecream",
+    "projectType": "Study  project",
+    "projectTechnology": "HTML / СSS",
+    "url": "https://goodluckmister.github.io/team_4-project/"
   }
 ]
