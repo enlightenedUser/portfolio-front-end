@@ -3,6 +3,7 @@ import FirstScreen from "./components/FirstScreen/FirstScreen";
 import Ticker from "./components/TickerComponent/TickerComponent";
 import Projects from "./components/Projects/Projects";
 import Summary from "./components/Summary/Summary";
+import Experience from "./components/Experience/Experience";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Ticker />
       <Projects />
       <Summary />
+      <Experience />
     </div>
   );
 };
