@@ -1,0 +1,18 @@
+.first-screen-container.container {
+  padding: 165px 180px 237px;
+  background-image: url("../../assets/images/myPhoto.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (max-width: 1280px) {
+    padding: 165px 135px 237px;
+  }
+}
+
+.react-label {
+  text-transform: none;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+  margin: 0 23px -60px 0;
+}

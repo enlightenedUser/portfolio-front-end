@@ -6,6 +6,8 @@ body {
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 i {
@@ -16,18 +18,13 @@ i {
   padding: 0 70px;
 }
 
-.h1r {
-  font-weight: 500;
-  font-size: 85px;
-  line-height: 102px;
-}
-
 .h1,
 h1 {
   font-weight: 500;
   font-size: 85px;
   line-height: 102px;
   color: var(--white);
+  margin: 0 0 30px;
 }
 
 .h2,
@@ -88,4 +85,8 @@ h2 {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.text-right {
+  text-align: right;
 }
