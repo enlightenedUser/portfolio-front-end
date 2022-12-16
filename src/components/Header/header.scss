@@ -1,0 +1,5 @@
+.menu-item {
+  &:not(:last-child) {
+    margin: 0 45px 0 0;
+  }
+}

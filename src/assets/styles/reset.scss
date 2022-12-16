@@ -2,8 +2,90 @@ body {
   font-family: NeueHaasMedium;
   background-color: var(--black);
   color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+i {
+  font-family: NeueHaasMediumItalic;
 }
 
 .container {
   padding: 0 70px;
+}
+
+.h1r {
+  font-weight: 500;
+  font-size: 85px;
+  line-height: 102px;
+}
+
+.h1,
+h1 {
+  font-weight: 500;
+  font-size: 85px;
+  line-height: 102px;
+  color: var(--white);
+}
+
+.h2,
+h2 {
+  font-weight: 500;
+  font-size: 65px;
+  line-height: 78px;
+  color: var(--white);
+}
+
+.p15 {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.p20 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.p30 {
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.p32 {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
