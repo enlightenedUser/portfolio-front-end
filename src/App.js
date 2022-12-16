@@ -2,6 +2,7 @@ import Header from "./components/Header/Header";
 import FirstScreen from "./components/FirstScreen/FirstScreen";
 import Ticker from "./components/TickerComponent/TickerComponent";
 import Projects from "./components/Projects/Projects";
+import Summary from "./components/Summary/Summary";
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
       <FirstScreen />
       <Ticker />
       <Projects />
+      <Summary />
     </div>
   );
 };
