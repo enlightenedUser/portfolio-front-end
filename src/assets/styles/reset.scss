@@ -47,6 +47,7 @@ h2 {
   font-size: 65px;
   line-height: 78px;
   color: var(--white);
+  margin: 0;
 }
 
 .p15 {
@@ -104,4 +105,8 @@ h2 {
 
 .text-right {
   text-align: right;
+}
+
+.underline {
+  text-decoration: underline;
 }
