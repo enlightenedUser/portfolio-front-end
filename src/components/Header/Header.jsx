@@ -6,9 +6,15 @@ const Header = () => {
       <div className="flex justify-between align-center">
         <p className="uppercase p15">Pavel Bulaienko</p>
         <div className="flex align-center">
-          <p className="uppercase menu-item p15">Projects</p>
-          <p className="uppercase menu-item p15">About</p>
-          <p className="uppercase menu-item p15">Contacts</p>
+          <a href="#projects-section" className="menu-item">
+            <p className="uppercase p15">Projects</p>
+          </a>
+          <a href="#about-me-section" className="menu-item">
+            <p className="uppercase p15">About</p>
+          </a>
+          <a href="#contact-me-section" className="menu-item">
+            <p className="uppercase p15">Contacts</p>
+          </a>
         </div>
       </div>
     </div>

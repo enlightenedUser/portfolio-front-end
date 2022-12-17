@@ -4,6 +4,9 @@ import Ticker from "./components/TickerComponent/TickerComponent";
 import Projects from "./components/Projects/Projects";
 import Summary from "./components/Summary/Summary";
 import Experience from "./components/Experience/Experience";
+import Education from "./components/Education/Education";
+import Skills from "./components/Skills/Skills";
+import ContactMe from "./components/ContactMe/ContactMe";
 
 const App = () => {
   return (
@@ -14,6 +17,10 @@ const App = () => {
       <Projects />
       <Summary />
       <Experience />
+      <Education />
+      <Skills />
+      <Ticker />
+      <ContactMe />
     </div>
   );
 };
