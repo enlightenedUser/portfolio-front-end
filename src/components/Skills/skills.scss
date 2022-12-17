@@ -1,0 +1,40 @@
+.skills-section {
+  padding: 180px 0 50px;
+
+  &.white {
+    padding: 40px 0 50px;
+    background-color: var(--white);
+    color: var(--black);
+
+    .skills-list {
+      .list-title {
+        margin: 0 0 25px;
+      }
+    }
+  }
+
+  .title {
+    padding: 0 0 70px;
+    border-bottom: 1px solid var(--main);
+  }
+
+  .skills-list {
+    width: 50%;
+    margin: 0 0 0 auto;
+
+    .list-title {
+      margin: 40px 0 25px;
+    }
+
+    &-item {
+      padding: 6px 14px;
+      border-radius: 16px;
+      border: 1px solid var(--main);
+      margin: 0 8px 8px 0;
+    }
+  }
+}
+
+.marginner {
+  margin: 0 0 180px;
+}
