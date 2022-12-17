@@ -26,3 +26,13 @@
 .main-color {
   color: var(--main);
 }
+
+.project-link {
+  fill: var(--white);
+  transition: 0.3s;
+
+  &:hover {
+    transition: 0.3s;
+    fill: var(--main);
+  }
+}

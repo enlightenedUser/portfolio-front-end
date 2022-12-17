@@ -16,11 +16,16 @@ body {
 
 a {
   text-decoration: none;
+  transition: 0.3s;
   &:visited {
     color: var(--white);
   }
   &:-webkit-any-link {
     color: var(--white);
+  }
+  &:hover {
+    transition: 0.3s;
+    color: var(--stroke-black);
   }
 }
 
