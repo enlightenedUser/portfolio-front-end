@@ -1,0 +1,30 @@
+[
+  {
+    "type": "Tech",
+    "bgColor": "dark",
+    "list": [
+      "React (router, redux, hooks, rest API)",
+      "HTML",
+      "JavaScript",
+      "Webpack",
+      "TypeScript",
+      "CSS",
+      "Web3.js, Ethers.js",
+      "GIT",
+      "Adaptive and responsive coding",
+      "Firebase DB"
+    ]
+  },
+  {
+    "type": "Soft",
+    "bgColor": "white",
+    "list": [
+      "Scrum",
+      "Teamwork",
+      "Agile",
+      "Perseverance",
+      "GTD",
+      "Desire to develop"
+    ]
+  }
+]

@@ -1,5 +1,5 @@
 .skills-section {
-  padding: 180px 0 50px;
+  padding: 40px 0 50px;
 
   &.white {
     padding: 40px 0 50px;
@@ -10,9 +10,17 @@
       .list-title {
         margin: 0 0 25px;
       }
+
+      .flex {
+        max-width: 30%;
+      }
     }
   }
 
+  &.title {
+    margin: 180px 0 0;
+    padding: 0;
+  }
   .title {
     padding: 0 0 70px;
     border-bottom: 1px solid var(--main);
@@ -31,6 +39,10 @@
       border-radius: 16px;
       border: 1px solid var(--main);
       margin: 0 8px 8px 0;
+    }
+
+    .flex {
+      max-width: 55%;
     }
   }
 }

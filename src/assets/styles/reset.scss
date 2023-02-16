@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: NeueHaasMedium;
+  font-family: NeueHaasMedium, serif;
   background-color: var(--black);
   color: var(--white);
   text-decoration: none;
@@ -30,7 +30,7 @@ a {
 }
 
 i {
-  font-family: NeueHaasMediumItalic;
+  font-family: NeueHaasMediumItalic, serif;
 }
 
 .container {
@@ -82,6 +82,10 @@ h2 {
 
 .flex {
   display: flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
 }
 
 .justify-center {
