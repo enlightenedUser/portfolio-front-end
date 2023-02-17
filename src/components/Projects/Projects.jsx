@@ -17,14 +17,19 @@ const Projects = () => {
             key={uuid()}
           >
             <a href={item.url} target="_blank" rel="noreferrer nofollow">
-              <p className="p30">{item.title}</p>
+              <p className="p30 project-name">{item.title}</p>
             </a>
             <div className="flex description-wrapper justify-between align-center">
               <div className="flex align-center">
-                <p className="project-type p15 main-color">
-                  {item.projectType}
+                {window.screen.width > 1200 && (
+                  <p className="project-type p15 main-color">
+                    {item.projectType}
+                  </p>
+                )}
+
+                <p className="p15 main-color project-technology">
+                  {item.projectTechnology}
                 </p>
-                <p className="p15 main-color">{item.projectTechnology}</p>
               </div>
               <a
                 href={item.url}

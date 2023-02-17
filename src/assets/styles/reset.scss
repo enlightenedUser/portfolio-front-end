@@ -35,6 +35,10 @@ i {
 
 .container {
   padding: 0 70px;
+
+  @media (max-width: 1200px) {
+    padding: 0 17px;
+  }
 }
 
 .h1,
@@ -44,6 +48,11 @@ h1 {
   line-height: 102px;
   color: var(--white);
   margin: 0 0 30px;
+
+  @media (max-width: 1200px) {
+    font-size: 50px;
+    line-height: 60px;
+  }
 }
 
 .h2,
@@ -53,12 +62,22 @@ h2 {
   line-height: 78px;
   color: var(--white);
   margin: 0;
+
+  @media (max-width: 1200px) {
+    font-size: 55px;
+    line-height: 66px;
+  }
 }
 
 .p15 {
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
+
+  @media (max-width: 1200px) {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 
 .p20 {
@@ -72,12 +91,22 @@ h2 {
   font-size: 30px;
   line-height: 36px;
   margin: 0;
+
+  @media (max-width: 1200px) {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 .p32 {
   font-weight: 500;
   font-size: 32px;
   line-height: 38px;
+
+  @media (max-width: 1200px) {
+    font-size: 18px;
+    line-height: 22px;
+  }
 }
 
 .flex {
@@ -112,8 +141,16 @@ h2 {
   text-transform: uppercase;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .text-right {
   text-align: right;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .underline {

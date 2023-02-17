@@ -7,3 +7,26 @@
 .header-section {
   margin: 35px 0 0;
 }
+
+@media (max-width: 1200px) {
+  .container.header-container {
+    padding: 0;
+
+    .header-section {
+      display: block;
+      margin: 65px 0 0;
+
+      .name {
+        text-align: center;
+      }
+
+      .menu-list {
+        justify-content: space-around;
+
+        .menu-item {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

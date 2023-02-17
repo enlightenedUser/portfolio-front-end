@@ -4,4 +4,20 @@
 
 .contact-me-section {
   padding: 75px 0;
+
+  @media (max-width: 1200px) {
+    padding: 45px 0;
+    flex-direction: column;
+  }
+
+  .title {
+    padding-bottom: 1px;
+    border-bottom: 3px solid var(--white);
+    display: inline-block;
+
+    @media (max-width: 1200px) {
+      margin: 0 0 30px;
+      flex-direction: column;
+    }
+  }
 }

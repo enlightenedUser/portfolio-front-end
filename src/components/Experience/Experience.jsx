@@ -10,7 +10,7 @@ const Experience = () => {
         </h2>
         {workList.map((work, index) => (
           <div key={index} className="work-item flex justify-between">
-            <p className="p30">{work.title}</p>
+            <p className="p30 work-title">{work.title}</p>
             <div className="flex description-wrapper justify-between">
               <div>
                 <p className="p15">Company: </p>

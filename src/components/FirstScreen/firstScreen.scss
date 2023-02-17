@@ -7,12 +7,47 @@
   @media (max-width: 1280px) {
     padding: 165px 135px 237px;
   }
-}
 
-.react-label {
-  text-transform: none;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 48px;
-  margin: 0 23px -60px 0;
+  @media (max-width: 1200px) {
+    padding: 55px 0;
+    display: block;
+    background-size: 245px 325px;
+    background-position: center 47%;
+
+    .first-text {
+      margin: 0 0 238px;
+
+      .h1 {
+        margin: 0 0 15px;
+      }
+    }
+
+    .second-text .h1 {
+      margin: 0 0 15px;
+    }
+  }
+
+  .react-label {
+    text-transform: none;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 48px;
+    margin: 0 23px -60px 0;
+
+    @media (max-width: 1200px) {
+      display: block;
+      text-align: left;
+      margin: 0 0 0 33px;
+      font-size: 25px;
+      line-height: 30px;
+    }
+
+    @media (max-width: 1200px) and (min-width: 756px) {
+      display: block;
+      text-align: center;
+      margin: 0 0 0 -269px;
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
 }

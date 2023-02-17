@@ -1,14 +1,38 @@
 .projects-wrapper {
   margin: 180px 0 0;
 
+  @media (max-width: 1200px) {
+    margin: 120px 0 0;
+  }
+
   .title {
     margin: 0 0 70px;
+
+    @media (max-width: 1200px) {
+      margin: 0 0 45px;
+    }
+  }
+}
+
+.project-name {
+  @media (max-width: 1200px) {
+    max-width: 156px;
+  }
+}
+
+.project-technology {
+  @media (max-width: 1200px) {
+    max-width: 93px;
   }
 }
 
 .project-item {
   padding: 20px 0 19px;
   border-bottom: 1px solid var(--stroke-black);
+
+  @media (max-width: 1200px) {
+    padding: 10px 0;
+  }
 
   &:first-of-type {
     border-top: 1px solid var(--stroke-black);

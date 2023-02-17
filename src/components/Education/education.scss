@@ -3,11 +3,21 @@
   background-position: 0 104%;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (max-width: 1200px) {
+    background-image: url("../../assets/images/certificates-mobile.png");
+    background-position: 0 121%;
+  }
 }
 
 .education-wrapper {
   padding: 180px 0 327px;
   align-items: start;
+  flex-direction: column;
+
+  @media (max-width: 1200px) {
+    padding: 120px 0 149px;
+  }
 
   .title {
     margin: 0;
@@ -15,10 +25,19 @@
 
   .education-description {
     width: 50%;
-    margin: 148px 0 0 0;
+    margin: 148px 0 0;
+
+    @media (max-width: 1200px) {
+      margin: 45px 0 0;
+    }
 
     .company-wrapper {
       margin: 0 0 40px;
+      white-space: nowrap;
+
+      @media (max-width: 1200px) {
+        margin: 35px 0 0;
+      }
     }
 
     .company {

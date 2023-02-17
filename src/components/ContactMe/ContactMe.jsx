@@ -12,7 +12,7 @@ const ContactMe = () => {
           target="_blank"
           rel="noreferrer nofollow"
         >
-          <h2 className="h2 underline">
+          <h2 className="h2 title">
             Contact <i>M</i>e
           </h2>
         </a>

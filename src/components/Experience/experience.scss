@@ -4,6 +4,10 @@
 
   .wrapper {
     padding: 80px 0;
+
+    @media (max-width: 1200px) {
+      padding: 55px 0;
+    }
   }
 
   .black {
@@ -14,15 +18,38 @@
     padding: 0 0 70px;
     margin-bottom: 0;
     border-bottom: 1px solid var(--stroke-white);
+
+    @media (max-width: 1200px) {
+      padding: 0 0 45px;
+    }
   }
 
   .work-item {
     padding: 35px 0;
     border-bottom: 1px solid var(--stroke-white);
+
+    @media (max-width: 1200px) {
+      padding: 30px 0;
+      flex-direction: column;
+
+      .work-title {
+        margin: 0 0 38px;
+      }
+    }
   }
 
   .company-description {
     width: 66%;
+
+    @media (max-width: 1200px) {
+      width: 48%;
+    }
+  }
+
+  .description-wrapper {
+    @media (max-width: 1200px) {
+      width: auto;
+    }
   }
 
   .white-main {
