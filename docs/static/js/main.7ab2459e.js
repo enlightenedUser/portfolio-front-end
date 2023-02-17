@@ -1,4 +1,4 @@
-/*! For license information please see main.76a18c49.js.LICENSE.txt */
+/*! For license information please see main.7ab2459e.js.LICENSE.txt */
 !(function () {
   "use strict";
   var e = {
@@ -210,8 +210,8 @@
           S = Symbol.for("react.portal"),
           x = Symbol.for("react.fragment"),
           _ = Symbol.for("react.strict_mode"),
-          E = Symbol.for("react.profiler"),
-          N = Symbol.for("react.provider"),
+          N = Symbol.for("react.profiler"),
+          E = Symbol.for("react.provider"),
           C = Symbol.for("react.context"),
           j = Symbol.for("react.forward_ref"),
           P = Symbol.for("react.suspense"),
@@ -348,7 +348,7 @@
               return "Fragment";
             case S:
               return "Portal";
-            case E:
+            case N:
               return "Profiler";
             case _:
               return "StrictMode";
@@ -361,7 +361,7 @@
             switch (e.$$typeof) {
               case C:
                 return (e.displayName || "Context") + ".Consumer";
-              case N:
+              case E:
                 return (e._context.displayName || "Context") + ".Provider";
               case j:
                 var n = e.render;
@@ -842,22 +842,22 @@
         var Se = null,
           xe = null,
           _e = null;
-        function Ee(e) {
+        function Ne(e) {
           if ((e = bl(e))) {
             if ("function" !== typeof Se) throw Error(a(280));
             var n = e.stateNode;
             n && ((n = wl(n)), Se(e.stateNode, e.type, n));
           }
         }
-        function Ne(e) {
+        function Ee(e) {
           xe ? (_e ? _e.push(e) : (_e = [e])) : (xe = e);
         }
         function Ce() {
           if (xe) {
             var e = xe,
               n = _e;
-            if (((_e = xe = null), Ee(e), n))
-              for (e = 0; e < n.length; e++) Ee(n[e]);
+            if (((_e = xe = null), Ne(e), n))
+              for (e = 0; e < n.length; e++) Ne(n[e]);
           }
         }
         function je(e, n) {
@@ -1208,8 +1208,8 @@
         var Sn,
           xn,
           _n,
-          En,
           Nn,
+          En,
           Cn = !1,
           jn = [],
           Pn = null,
@@ -1270,7 +1270,7 @@
                 if (null !== (n = $e(t)))
                   return (
                     (e.blockedOn = n),
-                    void Nn(e.priority, function () {
+                    void En(e.priority, function () {
                       _n(t);
                     })
                   );
@@ -1615,7 +1615,7 @@
             shiftKey: 0,
             altKey: 0,
             metaKey: 0,
-            getModifierState: Et,
+            getModifierState: Nt,
             button: 0,
             buttons: 0,
             relatedTarget: function (e) {
@@ -1719,10 +1719,10 @@
             ? n.getModifierState(e)
             : !!(e = xt[e]) && !!n[e];
         }
-        function Et() {
+        function Nt() {
           return _t;
         }
-        var Nt = O({}, ft, {
+        var Et = O({}, ft, {
             key: function (e) {
               if (e.key) {
                 var n = wt[e.key] || e.key;
@@ -1744,7 +1744,7 @@
             metaKey: 0,
             repeat: 0,
             locale: 0,
-            getModifierState: Et,
+            getModifierState: Nt,
             charCode: function (e) {
               return "keypress" === e.type ? tt(e) : 0;
             },
@@ -1759,7 +1759,7 @@
                 : 0;
             },
           }),
-          Ct = at(Nt),
+          Ct = at(Et),
           jt = at(
             O({}, pt, {
               pointerId: 0,
@@ -1783,7 +1783,7 @@
               metaKey: 0,
               ctrlKey: 0,
               shiftKey: 0,
-              getModifierState: Et,
+              getModifierState: Nt,
             })
           ),
           Tt = at(
@@ -1860,7 +1860,7 @@
           return "input" === n ? !!$t[e.type] : "textarea" === n;
         }
         function Wt(e, n, t, r) {
-          Ne(r),
+          Ee(r),
             0 < (n = Qr(n, "onChange")).length &&
               ((t = new ct("onChange", "change", null, t, r)),
               e.push({ event: t, listeners: n }));
@@ -2111,7 +2111,7 @@
           },
           xr = {},
           _r = {};
-        function Er(e) {
+        function Nr(e) {
           if (xr[e]) return xr[e];
           if (!Sr[e]) return e;
           var n,
@@ -2127,10 +2127,10 @@
             delete Sr.animationiteration.animation,
             delete Sr.animationstart.animation),
           "TransitionEvent" in window || delete Sr.transitionend.transition);
-        var Nr = Er("animationend"),
-          Cr = Er("animationiteration"),
-          jr = Er("animationstart"),
-          Pr = Er("transitionend"),
+        var Er = Nr("animationend"),
+          Cr = Nr("animationiteration"),
+          jr = Nr("animationstart"),
+          Pr = Nr("transitionend"),
           Tr = new Map(),
           zr =
             "abort auxClick cancel canPlay canPlayThrough click close contextMenu copy cut drag dragEnd dragEnter dragExit dragLeave dragOver dragStart drop durationChange emptied encrypted ended error gotPointerCapture input invalid keyDown keyPress keyUp load loadedData loadedMetadata loadStart lostPointerCapture mouseDown mouseMove mouseOut mouseOver mouseUp paste pause play playing pointerCancel pointerDown pointerMove pointerOut pointerOver pointerUp progress rateChange reset resize seeked seeking stalled submit suspend timeUpdate touchCancel touchEnd touchStart volumeChange scroll toggle touchMove waiting wheel".split(
@@ -2143,7 +2143,7 @@
           var Fr = zr[Rr];
           Lr(Fr.toLowerCase(), "on" + (Fr[0].toUpperCase() + Fr.slice(1)));
         }
-        Lr(Nr, "onAnimationEnd"),
+        Lr(Er, "onAnimationEnd"),
           Lr(Cr, "onAnimationIteration"),
           Lr(jr, "onAnimationStart"),
           Lr("dblclick", "onDoubleClick"),
@@ -2372,7 +2372,7 @@
                   case "touchstart":
                     u = Pt;
                     break;
-                  case Nr:
+                  case Er:
                   case Cr:
                   case jr:
                     u = gt;
@@ -2776,10 +2776,10 @@
         function _l(e) {
           return { current: e };
         }
-        function El(e) {
+        function Nl(e) {
           0 > xl || ((e.current = Sl[xl]), (Sl[xl] = null), xl--);
         }
-        function Nl(e, n) {
+        function El(e, n) {
           xl++, (Sl[xl] = e.current), (e.current = n);
         }
         var Cl = {},
@@ -2807,11 +2807,11 @@
           return null !== (e = e.childContextTypes) && void 0 !== e;
         }
         function Rl() {
-          El(Pl), El(jl);
+          Nl(Pl), Nl(jl);
         }
         function Fl(e, n, t) {
           if (jl.current !== Cl) throw Error(a(168));
-          Nl(jl, n), Nl(Pl, t);
+          El(jl, n), El(Pl, t);
         }
         function Dl(e, n, t) {
           var r = e.stateNode;
@@ -2830,8 +2830,8 @@
                 e.__reactInternalMemoizedMergedChildContext) ||
               Cl),
             (Tl = jl.current),
-            Nl(jl, e),
-            Nl(Pl, Pl.current),
+            El(jl, e),
+            El(Pl, Pl.current),
             !0
           );
         }
@@ -2841,11 +2841,11 @@
           t
             ? ((e = Dl(e, n, Tl)),
               (r.__reactInternalMemoizedMergedChildContext = e),
-              El(Pl),
-              El(jl),
-              Nl(jl, e))
-            : El(Pl),
-            Nl(Pl, t);
+              Nl(Pl),
+              Nl(jl),
+              El(jl, e))
+            : Nl(Pl),
+            El(Pl, t);
         }
         var Il = null,
           Ul = !1,
@@ -3065,7 +3065,7 @@
         }
         function Sa(e) {
           var n = ga.current;
-          El(ga), (e._currentValue = n);
+          Nl(ga), (e._currentValue = n);
         }
         function xa(e, n, t) {
           for (; null !== e; ) {
@@ -3087,7 +3087,7 @@
               null !== e.firstContext &&
               (0 !== (e.lanes & n) && (ki = !0), (e.firstContext = null));
         }
-        function Ea(e) {
+        function Na(e) {
           var n = e._currentValue;
           if (ka !== e)
             if (
@@ -3098,9 +3098,9 @@
             } else ba = ba.next = e;
           return n;
         }
-        var Na = null;
+        var Ea = null;
         function Ca(e) {
-          null === Na ? (Na = [e]) : Na.push(e);
+          null === Ea ? (Ea = [e]) : Ea.push(e);
         }
         function ja(e, n, t, r) {
           var l = n.interleaved;
@@ -3385,7 +3385,7 @@
             a = n.contextType;
           return (
             "object" === typeof a && null !== a
-              ? (a = Ea(a))
+              ? (a = Na(a))
               : ((l = Ll(n) ? Tl : jl.current),
                 (a = (r = null !== (r = n.contextTypes) && void 0 !== r)
                   ? zl(e, l)
@@ -3416,7 +3416,7 @@
           (l.props = t), (l.state = e.memoizedState), (l.refs = Ua), za(e);
           var a = n.contextType;
           "object" === typeof a && null !== a
-            ? (l.context = Ea(a))
+            ? (l.context = Na(a))
             : ((a = Ll(n) ? Tl : jl.current), (l.context = zl(e, a))),
             (l.state = e.memoizedState),
             "function" === typeof (a = n.getDerivedStateFromProps) &&
@@ -3823,7 +3823,7 @@
           return e;
         }
         function ro(e, n) {
-          switch ((Nl(no, n), Nl(eo, e), Nl(Za, Ga), (e = n.nodeType))) {
+          switch ((El(no, n), El(eo, e), El(Za, Ga), (e = n.nodeType))) {
             case 9:
             case 11:
               n = (n = n.documentElement) ? n.namespaceURI : ue(null, "");
@@ -3834,19 +3834,19 @@
                 (e = e.tagName)
               );
           }
-          El(Za), Nl(Za, n);
+          Nl(Za), El(Za, n);
         }
         function lo() {
-          El(Za), El(eo), El(no);
+          Nl(Za), Nl(eo), Nl(no);
         }
         function ao(e) {
           to(no.current);
           var n = to(Za.current),
             t = ue(n, e.type);
-          n !== t && (Nl(eo, e), Nl(Za, t));
+          n !== t && (El(eo, e), El(Za, t));
         }
         function oo(e) {
-          eo.current === e && (El(Za), El(eo));
+          eo.current === e && (Nl(Za), Nl(eo));
         }
         var io = _l(0);
         function uo(e) {
@@ -3932,11 +3932,11 @@
             throw Error(a(300));
           return e;
         }
-        function Eo() {
+        function No() {
           var e = 0 !== ko;
           return (ko = 0), e;
         }
-        function No() {
+        function Eo() {
           var e = {
             memoizedState: null,
             baseState: null,
@@ -4112,7 +4112,7 @@
           null !== n && rs(n, e, 1, -1);
         }
         function Io(e) {
-          var n = No();
+          var n = Eo();
           return (
             "function" === typeof e && (e = e()),
             (n.memoizedState = n.baseState = e),
@@ -4146,7 +4146,7 @@
           return Co().memoizedState;
         }
         function Vo(e, n, t, r) {
-          var l = No();
+          var l = Eo();
           (ho.flags |= e),
             (l.memoizedState = Uo(1 | n, t, void 0, void 0 === r ? null : r));
         }
@@ -4301,7 +4301,7 @@
           }
         }
         var oi = {
-            readContext: Ea,
+            readContext: Na,
             useCallback: So,
             useContext: So,
             useEffect: So,
@@ -4321,11 +4321,11 @@
             unstable_isNewReconciler: !1,
           },
           ii = {
-            readContext: Ea,
+            readContext: Na,
             useCallback: function (e, n) {
-              return (No().memoizedState = [e, void 0 === n ? null : n]), e;
+              return (Eo().memoizedState = [e, void 0 === n ? null : n]), e;
             },
-            useContext: Ea,
+            useContext: Na,
             useEffect: $o,
             useImperativeHandle: function (e, n, t) {
               return (
@@ -4340,7 +4340,7 @@
               return Vo(4, 2, e, n);
             },
             useMemo: function (e, n) {
-              var t = No();
+              var t = Eo();
               return (
                 (n = void 0 === n ? null : n),
                 (e = e()),
@@ -4349,7 +4349,7 @@
               );
             },
             useReducer: function (e, n, t) {
-              var r = No();
+              var r = Eo();
               return (
                 (n = void 0 !== t ? t(n) : n),
                 (r.memoizedState = r.baseState = n),
@@ -4367,24 +4367,24 @@
               );
             },
             useRef: function (e) {
-              return (e = { current: e }), (No().memoizedState = e);
+              return (e = { current: e }), (Eo().memoizedState = e);
             },
             useState: Io,
             useDebugValue: Yo,
             useDeferredValue: function (e) {
-              return (No().memoizedState = e);
+              return (Eo().memoizedState = e);
             },
             useTransition: function () {
               var e = Io(!1),
                 n = e[0];
               return (
-                (e = Zo.bind(null, e[1])), (No().memoizedState = e), [n, e]
+                (e = Zo.bind(null, e[1])), (Eo().memoizedState = e), [n, e]
               );
             },
             useMutableSource: function () {},
             useSyncExternalStore: function (e, n, t) {
               var r = ho,
-                l = No();
+                l = Eo();
               if (la) {
                 if (void 0 === t) throw Error(a(407));
                 t = t();
@@ -4403,7 +4403,7 @@
               );
             },
             useId: function () {
-              var e = No(),
+              var e = Eo(),
                 n = Tu.identifierPrefix;
               if (la) {
                 var t = Xl;
@@ -4420,9 +4420,9 @@
             unstable_isNewReconciler: !1,
           },
           ui = {
-            readContext: Ea,
+            readContext: Na,
             useCallback: Jo,
-            useContext: Ea,
+            useContext: Na,
             useEffect: Bo,
             useImperativeHandle: Ko,
             useInsertionEffect: Wo,
@@ -4446,9 +4446,9 @@
             unstable_isNewReconciler: !1,
           },
           si = {
-            readContext: Ea,
+            readContext: Na,
             useCallback: Jo,
-            useContext: Ea,
+            useContext: Na,
             useEffect: Bo,
             useImperativeHandle: Ko,
             useInsertionEffect: Wo,
@@ -4550,7 +4550,7 @@
             var l = new Set();
             r.set(n, l);
           } else void 0 === (l = r.get(n)) && ((l = new Set()), r.set(n, l));
-          l.has(t) || (l.add(t), (e = Ns.bind(null, e, n, t)), n.then(e, e));
+          l.has(t) || (l.add(t), (e = Es.bind(null, e, n, t)), n.then(e, e));
         }
         function gi(e) {
           do {
@@ -4591,7 +4591,7 @@
           return (
             _a(n, l),
             (r = _o(e, n, t, r, a, l)),
-            (t = Eo()),
+            (t = No()),
             null === e || ki
               ? (la && t && ea(n), (n.flags |= 1), wi(e, n, r, l), n.child)
               : ((n.updateQueue = e.updateQueue),
@@ -4639,7 +4639,7 @@
           }
           return Ci(e, n, t, r, l);
         }
-        function Ei(e, n, t) {
+        function Ni(e, n, t) {
           var r = n.pendingProps,
             l = r.children,
             a = null !== e ? e.memoizedState : null;
@@ -4650,7 +4650,7 @@
                 cachePool: null,
                 transitions: null,
               }),
-                Nl(Fu, Ru),
+                El(Fu, Ru),
                 (Ru |= t);
             else {
               if (0 === (1073741824 & t))
@@ -4663,7 +4663,7 @@
                     transitions: null,
                   }),
                   (n.updateQueue = null),
-                  Nl(Fu, Ru),
+                  El(Fu, Ru),
                   (Ru |= e),
                   null
                 );
@@ -4673,18 +4673,18 @@
                 transitions: null,
               }),
                 (r = null !== a ? a.baseLanes : t),
-                Nl(Fu, Ru),
+                El(Fu, Ru),
                 (Ru |= r);
             }
           else
             null !== a
               ? ((r = a.baseLanes | t), (n.memoizedState = null))
               : (r = t),
-              Nl(Fu, Ru),
+              El(Fu, Ru),
               (Ru |= r);
           return wi(e, n, l, t), n.child;
         }
-        function Ni(e, n) {
+        function Ei(e, n) {
           var t = n.ref;
           ((null === e && null !== t) || (null !== e && e.ref !== t)) &&
             ((n.flags |= 512), (n.flags |= 2097152));
@@ -4695,7 +4695,7 @@
             (a = zl(n, a)),
             _a(n, l),
             (t = _o(e, n, t, r, a, l)),
-            (r = Eo()),
+            (r = No()),
             null === e || ki
               ? (la && r && ea(n), (n.flags |= 1), wi(e, n, t, l), n.child)
               : ((n.updateQueue = e.updateQueue),
@@ -4718,7 +4718,7 @@
             var u = o.context,
               s = t.contextType;
             "object" === typeof s && null !== s
-              ? (s = Ea(s))
+              ? (s = Na(s))
               : (s = zl(n, (s = Ll(t) ? Tl : jl.current)));
             var c = t.getDerivedStateFromProps,
               f =
@@ -4766,7 +4766,7 @@
               (f = n.pendingProps),
               (d = o.context),
               "object" === typeof (u = t.contextType) && null !== u
-                ? (u = Ea(u))
+                ? (u = Na(u))
                 : (u = zl(n, (u = Ll(t) ? Tl : jl.current)));
             var p = t.getDerivedStateFromProps;
             (c =
@@ -4818,7 +4818,7 @@
           return Pi(e, n, t, r, a, l);
         }
         function Pi(e, n, t, r, l, a) {
-          Ni(e, n);
+          Ei(e, n);
           var o = 0 !== (128 & n.flags);
           if (!r && !o) return l && Ol(n, t, !1), Wi(e, n, a);
           (r = n.stateNode), (bi.current = n);
@@ -4867,7 +4867,7 @@
             r
               ? ((i = !0), (n.flags &= -129))
               : (null !== e && null === e.memoizedState) || (o |= 1),
-            Nl(io, 1 & o),
+            El(io, 1 & o),
             null === e)
           )
             return (
@@ -5110,7 +5110,7 @@
               }
             r &= 1;
           }
-          if ((Nl(io, r), 0 === (1 & n.mode))) n.memoizedState = null;
+          if ((El(io, r), 0 === (1 & n.mode))) n.memoizedState = null;
           else
             switch (l) {
               case "forwards":
@@ -5226,8 +5226,8 @@
               return (
                 (r = n.stateNode),
                 lo(),
-                El(Pl),
-                El(jl),
+                Nl(Pl),
+                Nl(jl),
                 co(),
                 r.pendingContext &&
                   ((r.context = r.pendingContext), (r.pendingContext = null)),
@@ -5475,7 +5475,7 @@
               return qi(n), null;
             case 13:
               if (
-                (El(io),
+                (Nl(io),
                 (r = n.memoizedState),
                 null === e ||
                   (null !== e.memoizedState &&
@@ -5529,7 +5529,7 @@
             case 10:
               return Sa(n.type._context), qi(n), null;
             case 19:
-              if ((El(io), null === (o = n.memoizedState))) return qi(n), null;
+              if ((Nl(io), null === (o = n.memoizedState))) return qi(n), null;
               if (((r = 0 !== (128 & n.flags)), null === (u = o.rendering)))
                 if (r) Qi(o, !1);
                 else {
@@ -5577,7 +5577,7 @@
                                         firstContext: e.firstContext,
                                       })),
                             (t = t.sibling);
-                        return Nl(io, (1 & io.current) | 2), n.child;
+                        return El(io, (1 & io.current) | 2), n.child;
                       }
                       e = e.sibling;
                     }
@@ -5622,7 +5622,7 @@
                   (o.renderingStartTime = Xe()),
                   (n.sibling = null),
                   (t = io.current),
-                  Nl(io, r ? (1 & t) | 2 : 1 & t),
+                  El(io, r ? (1 & t) | 2 : 1 & t),
                   n)
                 : (qi(n), null);
             case 22:
@@ -5657,8 +5657,8 @@
             case 3:
               return (
                 lo(),
-                El(Pl),
-                El(jl),
+                Nl(Pl),
+                Nl(jl),
                 co(),
                 0 !== (65536 & (e = n.flags)) && 0 === (128 & e)
                   ? ((n.flags = (-65537 & e) | 128), n)
@@ -5668,7 +5668,7 @@
               return oo(n), null;
             case 13:
               if (
-                (El(io),
+                (Nl(io),
                 null !== (e = n.memoizedState) && null !== e.dehydrated)
               ) {
                 if (null === n.alternate) throw Error(a(340));
@@ -5678,7 +5678,7 @@
                 ? ((n.flags = (-65537 & e) | 128), n)
                 : null;
             case 19:
-              return El(io), null;
+              return Nl(io), null;
             case 4:
               return lo(), null;
             case 10:
@@ -5795,7 +5795,7 @@
               try {
                 t(null);
               } catch (r) {
-                Es(e, n, r);
+                Ns(e, n, r);
               }
             else t.current = null;
         }
@@ -5803,7 +5803,7 @@
           try {
             t();
           } catch (r) {
-            Es(e, n, r);
+            Ns(e, n, r);
           }
         }
         var tu = !1;
@@ -5991,7 +5991,7 @@
                     (r.state = t.memoizedState),
                     r.componentWillUnmount();
                 } catch (i) {
-                  Es(t, n, i);
+                  Ns(t, n, i);
                 }
               pu(e, n, t);
               break;
@@ -6047,7 +6047,7 @@
                 var s = l.alternate;
                 null !== s && (s.return = null), (l.return = null);
               } catch (c) {
-                Es(l, n, c);
+                Ns(l, n, c);
               }
             }
           if (12854 & n.subtreeFlags)
@@ -6065,12 +6065,12 @@
                 try {
                   ru(3, e, e.return), lu(3, e);
                 } catch (v) {
-                  Es(e, e.return, v);
+                  Ns(e, e.return, v);
                 }
                 try {
                   ru(5, e, e.return);
                 } catch (v) {
-                  Es(e, e.return, v);
+                  Ns(e, e.return, v);
                 }
               }
               break;
@@ -6088,7 +6088,7 @@
                 try {
                   de(l, "");
                 } catch (v) {
-                  Es(e, e.return, v);
+                  Ns(e, e.return, v);
                 }
               }
               if (4 & r && null != (l = e.stateNode)) {
@@ -6135,7 +6135,7 @@
                     }
                     l[pl] = o;
                   } catch (v) {
-                    Es(e, e.return, v);
+                    Ns(e, e.return, v);
                   }
               }
               break;
@@ -6146,7 +6146,7 @@
                 try {
                   l.nodeValue = o;
                 } catch (v) {
-                  Es(e, e.return, v);
+                  Ns(e, e.return, v);
                 }
               }
               break;
@@ -6159,7 +6159,7 @@
                 try {
                   $n(n.containerInfo);
                 } catch (v) {
-                  Es(e, e.return, v);
+                  Ns(e, e.return, v);
                 }
               break;
             case 4:
@@ -6211,7 +6211,7 @@
                                 (h.state = n.memoizedState),
                                 h.componentWillUnmount();
                             } catch (v) {
-                              Es(r, t, v);
+                              Ns(r, t, v);
                             }
                           }
                           break;
@@ -6247,7 +6247,7 @@
                                   : null),
                               (u.style.display = he("display", i)));
                       } catch (v) {
-                        Es(e, e.return, v);
+                        Ns(e, e.return, v);
                       }
                     }
                   } else if (6 === d.tag) {
@@ -6255,7 +6255,7 @@
                       try {
                         d.stateNode.nodeValue = c ? "" : d.memoizedProps;
                       } catch (v) {
-                        Es(e, e.return, v);
+                        Ns(e, e.return, v);
                       }
                   } else if (
                     ((22 !== d.tag && 23 !== d.tag) ||
@@ -6311,7 +6311,7 @@
                   throw Error(a(161));
               }
             } catch (i) {
-              Es(e, e.return, i);
+              Ns(e, e.return, i);
             }
             e.flags &= -3;
           }
@@ -6436,7 +6436,7 @@
                   }
                 Xi || (512 & n.flags && au(n));
               } catch (p) {
-                Es(n, n.return, p);
+                Ns(n, n.return, p);
               }
             }
             if (n === e) {
@@ -6477,7 +6477,7 @@
                   try {
                     lu(4, n);
                   } catch (u) {
-                    Es(n, t, u);
+                    Ns(n, t, u);
                   }
                   break;
                 case 1:
@@ -6487,14 +6487,14 @@
                     try {
                       r.componentDidMount();
                     } catch (u) {
-                      Es(n, l, u);
+                      Ns(n, l, u);
                     }
                   }
                   var a = n.return;
                   try {
                     au(n);
                   } catch (u) {
-                    Es(n, a, u);
+                    Ns(n, a, u);
                   }
                   break;
                 case 5:
@@ -6502,11 +6502,11 @@
                   try {
                     au(n);
                   } catch (u) {
-                    Es(n, o, u);
+                    Ns(n, o, u);
                   }
               }
             } catch (u) {
-              Es(n, n.return, u);
+              Ns(n, n.return, u);
             }
             if (n === e) {
               Zi = null;
@@ -6521,8 +6521,8 @@
           }
         }
         var _u,
-          Eu = Math.ceil,
-          Nu = k.ReactCurrentDispatcher,
+          Nu = Math.ceil,
+          Eu = k.ReactCurrentDispatcher,
           Cu = k.ReactCurrentOwner,
           ju = k.ReactCurrentBatchConfig,
           Pu = 0,
@@ -6657,7 +6657,7 @@
                 ms(e, u);
               }
             wa(),
-              (Nu.current = o),
+              (Eu.current = o),
               (Pu = l),
               null !== zu ? (n = 0) : ((Tu = null), (Lu = 0), (n = Du));
           }
@@ -6752,7 +6752,7 @@
                           ? 3e3
                           : 4320 > r
                           ? 4320
-                          : 1960 * Eu(r / 1960)) - r))
+                          : 1960 * Nu(r / 1960)) - r))
                   ) {
                     e.timeoutHandle = rl(Ss.bind(null, e, Vu, Bu), r);
                     break;
@@ -6834,7 +6834,7 @@
           }
         }
         function ds() {
-          (Ru = Fu.current), El(Fu);
+          (Ru = Fu.current), Nl(Fu);
         }
         function ps(e, n) {
           (e.finishedWork = null), (e.finishedLanes = 0);
@@ -6849,7 +6849,7 @@
                     Rl();
                   break;
                 case 3:
-                  lo(), El(Pl), El(jl), co();
+                  lo(), Nl(Pl), Nl(jl), co();
                   break;
                 case 5:
                   oo(r);
@@ -6859,7 +6859,7 @@
                   break;
                 case 13:
                 case 19:
-                  El(io);
+                  Nl(io);
                   break;
                 case 10:
                   Sa(r.type._context);
@@ -6878,10 +6878,10 @@
             (Mu = null),
             (Uu = Iu = Ou = 0),
             (Vu = Au = null),
-            null !== Na)
+            null !== Ea)
           ) {
-            for (n = 0; n < Na.length; n++)
-              if (null !== (r = (t = Na[n]).interleaved)) {
+            for (n = 0; n < Ea.length; n++)
+              if (null !== (r = (t = Ea[n]).interleaved)) {
                 t.interleaved = null;
                 var l = r.next,
                   a = t.pending;
@@ -6891,7 +6891,7 @@
                 }
                 t.pending = r;
               }
-            Na = null;
+            Ea = null;
           }
           return e;
         }
@@ -7009,8 +7009,8 @@
           }
         }
         function hs() {
-          var e = Nu.current;
-          return (Nu.current = oi), null === e ? oi : e;
+          var e = Eu.current;
+          return (Eu.current = oi), null === e ? oi : e;
         }
         function vs() {
           (0 !== Du && 3 !== Du && 2 !== Du) || (Du = 4),
@@ -7029,7 +7029,7 @@
             } catch (l) {
               ms(e, l);
             }
-          if ((wa(), (Pu = t), (Nu.current = r), null !== zu))
+          if ((wa(), (Pu = t), (Eu.current = r), null !== zu))
             throw Error(a(261));
           return (Tu = null), (Lu = 0), Du;
         }
@@ -7236,7 +7236,7 @@
                                     throw Error(a(163));
                                 }
                             } catch (w) {
-                              Es(n, n.return, w);
+                              Ns(n, n.return, w);
                             }
                             if (null !== (e = n.sibling)) {
                               (e.return = n.return), (Zi = e);
@@ -7388,7 +7388,7 @@
                               lu(9, u);
                           }
                         } catch (S) {
-                          Es(u, u.return, S);
+                          Ns(u, u.return, S);
                         }
                       if (u === i) {
                         Zi = null;
@@ -7424,7 +7424,7 @@
             (n = ns()),
             null !== e && (yn(e, 1, n), ls(e, n));
         }
-        function Es(e, n, t) {
+        function Ns(e, n, t) {
           if (3 === e.tag) _s(e, e, t);
           else
             for (; null !== n; ) {
@@ -7448,7 +7448,7 @@
               n = n.return;
             }
         }
-        function Ns(e, n, t) {
+        function Es(e, n, t) {
           var r = e.pingCache;
           null !== r && r.delete(n),
             (n = ns()),
@@ -7567,9 +7567,9 @@
               case _:
                 (i = 8), (l |= 8);
                 break;
-              case E:
+              case N:
                 return (
-                  ((e = Ls(12, t, n, 2 | l)).elementType = E), (e.lanes = o), e
+                  ((e = Ls(12, t, n, 2 | l)).elementType = N), (e.lanes = o), e
                 );
               case P:
                 return (
@@ -7584,7 +7584,7 @@
               default:
                 if ("object" === typeof e && null !== e)
                   switch (e.$$typeof) {
-                    case N:
+                    case E:
                       i = 10;
                       break e;
                     case C:
@@ -7774,17 +7774,17 @@
                       case 10:
                         var r = n.type._context,
                           l = n.memoizedProps.value;
-                        Nl(ga, r._currentValue), (r._currentValue = l);
+                        El(ga, r._currentValue), (r._currentValue = l);
                         break;
                       case 13:
                         if (null !== (r = n.memoizedState))
                           return null !== r.dehydrated
-                            ? (Nl(io, 1 & io.current), (n.flags |= 128), null)
+                            ? (El(io, 1 & io.current), (n.flags |= 128), null)
                             : 0 !== (t & n.child.childLanes)
                             ? Ii(e, n, t)
-                            : (Nl(io, 1 & io.current),
+                            : (El(io, 1 & io.current),
                               null !== (e = Wi(e, n, t)) ? e.sibling : null);
-                        Nl(io, 1 & io.current);
+                        El(io, 1 & io.current);
                         break;
                       case 19:
                         if (
@@ -7799,14 +7799,14 @@
                             ((l.rendering = null),
                             (l.tail = null),
                             (l.lastEffect = null)),
-                          Nl(io, io.current),
+                          El(io, io.current),
                           r)
                         )
                           break;
                         return null;
                       case 22:
                       case 23:
-                        return (n.lanes = 0), Ei(e, n, t);
+                        return (n.lanes = 0), Ni(e, n, t);
                     }
                     return Wi(e, n, t);
                   })(e, n, t)
@@ -7820,7 +7820,7 @@
               Bi(e, n), (e = n.pendingProps);
               var l = zl(n, jl.current);
               _a(n, t), (l = _o(null, n, r, e, l, t));
-              var o = Eo();
+              var o = No();
               return (
                 (n.flags |= 1),
                 "object" === typeof l &&
@@ -7953,7 +7953,7 @@
                 tl(r, l)
                   ? (i = null)
                   : null !== o && tl(r, o) && (n.flags |= 32),
-                Ni(e, n),
+                Ei(e, n),
                 wi(e, n, i, t),
                 n.child
               );
@@ -7986,7 +7986,7 @@
                   (l = n.pendingProps),
                   (o = n.memoizedProps),
                   (i = l.value),
-                  Nl(ga, r._currentValue),
+                  El(ga, r._currentValue),
                   (r._currentValue = i),
                   null !== o)
                 )
@@ -8057,7 +8057,7 @@
                 (l = n.type),
                 (r = n.pendingProps.children),
                 _a(n, t),
-                (r = r((l = Ea(l)))),
+                (r = r((l = Na(l)))),
                 (n.flags |= 1),
                 wi(e, n, r, t),
                 n.child
@@ -8085,7 +8085,7 @@
             case 19:
               return $i(e, n, t);
             case 22:
-              return Ei(e, n, t);
+              return Ni(e, n, t);
           }
           throw Error(a(156, n.tag));
         };
@@ -8190,7 +8190,7 @@
             }),
           (Js.prototype.unstable_scheduleHydration = function (e) {
             if (e) {
-              var n = En();
+              var n = Nn();
               e = { blockedOn: null, target: e, priority: n };
               for (
                 var t = 0;
@@ -8238,10 +8238,10 @@
               qs(e, n);
             }
           }),
-          (En = function () {
+          (Nn = function () {
             return kn;
           }),
-          (Nn = function (e, n) {
+          (En = function (e, n) {
             var t = kn;
             try {
               return (kn = e), n();
@@ -8282,7 +8282,7 @@
           (Pe = fs);
         var nc = {
             usingClientEntryPoint: !1,
-            Events: [bl, kl, wl, Ne, Ce, cs],
+            Events: [bl, kl, wl, Ee, Ce, cs],
           },
           tc = {
             findFiberByHostInstance: yl,
@@ -8534,7 +8534,7 @@
           S = Object.prototype.hasOwnProperty,
           x = { current: null },
           _ = { key: !0, ref: !0, __self: !0, __source: !0 };
-        function E(e, n, r) {
+        function N(e, n, r) {
           var l,
             a = {},
             o = null,
@@ -8561,7 +8561,7 @@
             _owner: x.current,
           };
         }
-        function N(e) {
+        function E(e) {
           return "object" === typeof e && null !== e && e.$$typeof === t;
         }
         var C = /\/+/g;
@@ -8607,7 +8607,7 @@
                     return e;
                   }))
                 : null != o &&
-                  (N(o) &&
+                  (E(o) &&
                     (o = (function (e, n) {
                       return {
                         $$typeof: t,
@@ -8722,7 +8722,7 @@
             );
           },
           only: function (e) {
-            if (!N(e))
+            if (!E(e))
               throw Error(
                 "React.Children.only expected to receive a single React element child."
               );
@@ -8790,9 +8790,9 @@
               (e.Consumer = e)
             );
           }),
-          (n.createElement = E),
+          (n.createElement = N),
           (n.createFactory = function (e) {
-            var n = E.bind(null, e);
+            var n = N.bind(null, e);
             return (n.type = e), n;
           }),
           (n.createRef = function () {
@@ -8801,7 +8801,7 @@
           (n.forwardRef = function (e) {
             return { $$typeof: s, render: e };
           }),
-          (n.isValidElement = N),
+          (n.isValidElement = E),
           (n.lazy = function (e) {
             return {
               $$typeof: d,
@@ -8963,7 +8963,7 @@
             }
         }
         function S(e, t) {
-          (h = !1), v && ((v = !1), y(N), (N = -1)), (m = !0);
+          (h = !1), v && ((v = !1), y(E), (E = -1)), (m = !0);
           var a = p;
           try {
             for (
@@ -8999,22 +8999,22 @@
           navigator.scheduling.isInputPending.bind(navigator.scheduling);
         var x,
           _ = !1,
-          E = null,
-          N = -1,
+          N = null,
+          E = -1,
           C = 5,
           j = -1;
         function P() {
           return !(n.unstable_now() - j < C);
         }
         function T() {
-          if (null !== E) {
+          if (null !== N) {
             var e = n.unstable_now();
             j = e;
             var t = !0;
             try {
-              t = E(!0, e);
+              t = N(!0, e);
             } finally {
-              t ? x() : ((_ = !1), (E = null));
+              t ? x() : ((_ = !1), (N = null));
             }
           } else _ = !1;
         }
@@ -9034,10 +9034,10 @@
             g(T, 0);
           };
         function R(e) {
-          (E = e), _ || ((_ = !0), x());
+          (N = e), _ || ((_ = !0), x());
         }
         function F(e, t) {
-          N = g(function () {
+          E = g(function () {
             e(n.unstable_now());
           }, t);
         }
@@ -9142,7 +9142,7 @@
                   t(c, e),
                   null === r(s) &&
                     e === r(c) &&
-                    (v ? (y(N), (N = -1)) : (v = !0), F(w, a - o)))
+                    (v ? (y(E), (E = -1)) : (v = !0), F(w, a - o)))
                 : ((e.sortIndex = i), t(s, e), h || m || ((h = !0), R(S))),
               e
             );
@@ -9180,16 +9180,16 @@
         l = t(184),
         a = function () {
           return (0, l.jsx)("div", {
-            className: "container",
+            className: "container header-container",
             children: (0, l.jsxs)("div", {
               className: "flex justify-between align-center header-section",
               children: [
                 (0, l.jsx)("p", {
-                  className: "uppercase p15",
+                  className: "uppercase p15 name",
                   children: "Pavel Bulaienko",
                 }),
                 (0, l.jsxs)("div", {
-                  className: "flex align-center",
+                  className: "flex align-center menu-list",
                   children: [
                     (0, l.jsx)("a", {
                       href: "#projects-section",
@@ -9222,63 +9222,124 @@
           });
         },
         o = function () {
-          return (0, l.jsxs)("div", {
-            className: "container first-screen-container flex justify-between",
-            children: [
-              (0, l.jsxs)("div", {
-                className: "flex column uppercase",
+          return window.screen.width < 1200
+            ? (0, l.jsxs)("div", {
+                className:
+                  "container first-screen-container flex justify-between",
                 children: [
                   (0, l.jsxs)("div", {
-                    className: "flex align-center",
+                    className: "uppercase text-center first-text",
+                    children: [
+                      (0, l.jsxs)("h1", {
+                        className: "h1",
+                        children: [
+                          "Hi! I\u2019m P",
+                          (0, l.jsx)("i", { children: "a" }),
+                          "vel:)",
+                        ],
+                      }),
+                      (0, l.jsxs)("h1", {
+                        className: "h1",
+                        children: [
+                          "Fr",
+                          (0, l.jsx)("i", { children: "o" }),
+                          "ntend",
+                        ],
+                      }),
+                    ],
+                  }),
+                  (0, l.jsxs)("div", {
+                    className: "uppercase text-center second-text",
                     children: [
                       (0, l.jsx)("i", {
-                        className: "react-label",
+                        className: "react-label text-left",
                         children: "react",
                       }),
-                      (0, l.jsx)("h1", { className: "h1", children: "Hi!" }),
+                      (0, l.jsxs)("h1", {
+                        className: "h1",
+                        children: [
+                          "devel",
+                          (0, l.jsx)("i", { children: "o" }),
+                          "per",
+                        ],
+                      }),
+                      (0, l.jsxs)("h1", {
+                        className: "h1",
+                        children: [
+                          "b",
+                          (0, l.jsx)("i", { children: "a" }),
+                          "sed in Kyiv",
+                        ],
+                      }),
                     ],
-                  }),
-                  (0, l.jsxs)("h1", {
-                    className: "h1",
-                    children: [
-                      "Fr",
-                      (0, l.jsx)("i", { children: "o" }),
-                      "ntend",
-                    ],
-                  }),
-                  (0, l.jsxs)("h1", {
-                    className: "h1",
-                    children: ["b", (0, l.jsx)("i", { children: "a" }), "sed"],
                   }),
                 ],
-              }),
-              (0, l.jsxs)("div", {
-                className: "flex column uppercase",
+              })
+            : (0, l.jsxs)("div", {
+                className:
+                  "container first-screen-container flex justify-between",
                 children: [
-                  (0, l.jsxs)("h1", {
-                    className: "h1 text-right",
+                  (0, l.jsxs)("div", {
+                    className: "flex column uppercase",
                     children: [
-                      "I\u2019m P",
-                      (0, l.jsx)("i", { children: "a" }),
-                      "vel:)",
+                      (0, l.jsxs)("div", {
+                        className: "flex align-center",
+                        children: [
+                          (0, l.jsx)("i", {
+                            className: "react-label",
+                            children: "react",
+                          }),
+                          (0, l.jsx)("h1", {
+                            className: "h1",
+                            children: "Hi!",
+                          }),
+                        ],
+                      }),
+                      (0, l.jsxs)("h1", {
+                        className: "h1",
+                        children: [
+                          "Fr",
+                          (0, l.jsx)("i", { children: "o" }),
+                          "ntend",
+                        ],
+                      }),
+                      (0, l.jsxs)("h1", {
+                        className: "h1",
+                        children: [
+                          "b",
+                          (0, l.jsx)("i", { children: "a" }),
+                          "sed",
+                        ],
+                      }),
                     ],
                   }),
-                  (0, l.jsxs)("h1", {
-                    className: "h1 text-right",
+                  (0, l.jsxs)("div", {
+                    className: "flex column uppercase",
                     children: [
-                      "devel",
-                      (0, l.jsx)("i", { children: "o" }),
-                      "per",
+                      (0, l.jsxs)("h1", {
+                        className: "h1 text-right",
+                        children: [
+                          "I\u2019m P",
+                          (0, l.jsx)("i", { children: "a" }),
+                          "vel:)",
+                        ],
+                      }),
+                      (0, l.jsxs)("h1", {
+                        className: "h1 text-right",
+                        children: [
+                          "devel",
+                          (0, l.jsx)("i", { children: "o" }),
+                          "per",
+                        ],
+                      }),
+                      (0, l.jsx)("h1", {
+                        className: "h1 text-right",
+                        children: "in Kyiv",
+                      }),
                     ],
-                  }),
-                  (0, l.jsx)("h1", {
-                    className: "h1 text-right",
-                    children: "in Kyiv",
                   }),
                 ],
-              }),
-            ],
-          });
+              });
         },
         i = function () {
           return (0, l.jsx)("div", {
@@ -9449,7 +9510,7 @@
                 }),
                 h.map(function (e) {
                   return (0,
-                  l.jsxs)("div", { className: "flex project-item justify-between align-center", children: [(0, l.jsx)("a", { href: e.url, target: "_blank", rel: "noreferrer nofollow", children: (0, l.jsx)("p", { className: "p30", children: e.title }) }), (0, l.jsxs)("div", { className: "flex description-wrapper justify-between align-center", children: [(0, l.jsxs)("div", { className: "flex align-center", children: [(0, l.jsx)("p", { className: "project-type p15 main-color", children: e.projectType }), (0, l.jsx)("p", { className: "p15 main-color", children: e.projectTechnology })] }), (0, l.jsx)("a", { href: e.url, target: "_blank", rel: "noreferrer nofollow", className: "project-link", children: (0, l.jsx)("svg", { width: "46", height: "10", viewBox: "0 0 46 10", xmlns: "http://www.w3.org/2000/svg", children: (0, l.jsx)("path", { d: "M45.4243 5.42426C45.6586 5.18995 45.6586 4.81005 45.4243 4.57574L41.6059 0.757359C41.3716 0.523045 40.9917 0.523045 40.7574 0.757359C40.523 0.991674 40.523 1.37157 40.7574 1.60589L44.1515 5L40.7574 8.39411C40.523 8.62843 40.523 9.00833 40.7574 9.24264C40.9917 9.47696 41.3716 9.47696 41.6059 9.24264L45.4243 5.42426ZM0 5.6L45 5.6V4.4L0 4.4L0 5.6Z" }) }) })] })] }, m());
+                  l.jsxs)("div", { className: "flex project-item justify-between align-center", children: [(0, l.jsx)("a", { href: e.url, target: "_blank", rel: "noreferrer nofollow", children: (0, l.jsx)("p", { className: "p30 project-name", children: e.title }) }), (0, l.jsxs)("div", { className: "flex description-wrapper justify-between align-center", children: [(0, l.jsxs)("div", { className: "flex align-center", children: [window.screen.width > 1200 && (0, l.jsx)("p", { className: "project-type p15 main-color", children: e.projectType }), (0, l.jsx)("p", { className: "p15 main-color project-technology", children: e.projectTechnology })] }), (0, l.jsx)("a", { href: e.url, target: "_blank", rel: "noreferrer nofollow", className: "project-link", children: (0, l.jsx)("svg", { width: "46", height: "10", viewBox: "0 0 46 10", xmlns: "http://www.w3.org/2000/svg", children: (0, l.jsx)("path", { d: "M45.4243 5.42426C45.6586 5.18995 45.6586 4.81005 45.4243 4.57574L41.6059 0.757359C41.3716 0.523045 40.9917 0.523045 40.7574 0.757359C40.523 0.991674 40.523 1.37157 40.7574 1.60589L44.1515 5L40.7574 8.39411C40.523 8.62843 40.523 9.00833 40.7574 9.24264C40.9917 9.47696 41.3716 9.47696 41.6059 9.24264L45.4243 5.42426ZM0 5.6L45 5.6V4.4L0 4.4L0 5.6Z" }) }) })] })] }, m());
                 }),
               ],
             }),
@@ -9485,7 +9546,7 @@
                 }),
                 y.map(function (e, n) {
                   return (0,
-                  l.jsxs)("div", { className: "work-item flex justify-between", children: [(0, l.jsx)("p", { className: "p30", children: e.title }), (0, l.jsxs)("div", { className: "flex description-wrapper justify-between", children: [(0, l.jsxs)("div", { children: [(0, l.jsx)("p", { className: "p15", children: "Company: " }), (0, l.jsx)("p", { className: "p15", children: "Technology: " }), (0, l.jsx)("br", {}), (0, l.jsx)("p", { className: "p15", children: "Terms: " })] }), (0, l.jsxs)("div", { className: "company-description", children: [(0, l.jsx)("p", { className: "p15 white-main", children: e.company }), (0, l.jsx)("p", { className: "p15 white-main", children: e.description }), (0, l.jsx)("p", { className: "p15 white-main", children: e.technology }), (0, l.jsx)("p", { className: "p15 white-main", children: e.terms })] })] })] }, n);
+                  l.jsxs)("div", { className: "work-item flex justify-between", children: [(0, l.jsx)("p", { className: "p30 work-title", children: e.title }), (0, l.jsxs)("div", { className: "flex description-wrapper justify-between", children: [(0, l.jsxs)("div", { children: [(0, l.jsx)("p", { className: "p15", children: "Company: " }), (0, l.jsx)("p", { className: "p15", children: "Technology: " }), (0, l.jsx)("br", {}), (0, l.jsx)("p", { className: "p15", children: "Terms: " })] }), (0, l.jsxs)("div", { className: "company-description", children: [(0, l.jsx)("p", { className: "p15 white-main", children: e.company }), (0, l.jsx)("p", { className: "p15 white-main", children: e.description }), (0, l.jsx)("p", { className: "p15 white-main", children: e.technology }), (0, l.jsx)("p", { className: "p15 white-main", children: e.terms })] })] })] }, n);
                 }),
               ],
             }),
@@ -9608,7 +9669,7 @@
                   target: "_blank",
                   rel: "noreferrer nofollow",
                   children: (0, l.jsxs)("h2", {
-                    className: "h2 underline",
+                    className: "h2 title",
                     children: [
                       "Contact ",
                       (0, l.jsx)("i", { children: "M" }),
@@ -9690,4 +9751,4 @@
       );
     })();
 })();
-//# sourceMappingURL=main.76a18c49.js.map
+//# sourceMappingURL=main.7ab2459e.js.map
