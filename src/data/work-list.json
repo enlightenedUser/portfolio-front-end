@@ -1,23 +1,30 @@
 [
   {
     "title": "React Front-end Developer",
+    "company": "NDA",
+    "description": "DeFi / DEX aggregator, DAO platform",
+    "technology": "TypeScript /React /HTML / CSS /JavaScript",
+    "terms": "May 2023 - Now"
+  },
+  {
+    "title": "React Front-end Developer",
     "company": "Noname Digital",
     "description": "Website development",
     "technology": "React /HTML / CSS /JavaScript",
-    "terms": "December 2021 - February 2023 (3 month)"
+    "terms": "December 2022 - February 2023"
   },
   {
     "title": "React Front-end Developer",
     "company": "Nimbus",
     "description": "DAO-governed platform",
     "technology": "React /HTML / CSS /JavaScript",
-    "terms": "September 2021 - December 2022 (1 year 4 month)"
+    "terms": "September 2021 - December 2022"
   },
   {
     "title": "Front-end Developer",
     "company": "Terrapromo",
     "description": "Website development",
     "technology": "HTML / CSS /PHP /JavaScript",
-    "terms": "March 2021 - June 2021 (4 month)"
+    "terms": "March 2021 - June 2021"
   }
 ]

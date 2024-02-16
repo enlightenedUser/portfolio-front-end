@@ -33,7 +33,7 @@ const ContactMe = () => {
             <p className="p15 uppercase">Linkedin</p>
           </a>
           <a
-            href="https://github.com/PavelBulaienko"
+            href="https://github.com/enlightenedUser"
             target="_blank"
             rel="noreferrer nofollow"
           >
