@@ -42,12 +42,6 @@
     "url": "https://goldenark.com/"
   },
   {
-    "title": "Phone Book",
-    "projectType": "Study  project",
-    "projectTechnology": "React",
-    "url": "https://pavelbulaienko.github.io/goit-react-hw-09-phonebook/"
-  },
-  {
     "title": "Optomodno",
     "projectType": "Team project",
     "projectTechnology": "JS  / Wordpress / PHP",
@@ -58,6 +52,12 @@
     "projectType": "Team project",
     "projectTechnology": "JS  / Wordpress / PHP",
     "url": "http://fermatastudio.com.ua/"
+  },
+  {
+    "title": "Phone Book",
+    "projectType": "Study  project",
+    "projectTechnology": "React",
+    "url": "https://pavelbulaienko.github.io/goit-react-hw-09-phonebook/"
   },
   {
     "title": "Web studio",

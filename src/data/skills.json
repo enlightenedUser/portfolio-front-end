@@ -4,26 +4,31 @@
     "bgColor": "dark",
     "list": [
       "React (router, redux, hooks, rest API)",
-      "HTML",
+      "Next.js",
       "JavaScript",
-      "Webpack",
       "TypeScript",
-      "CSS",
       "Web3.js, Ethers.js",
+      "Firebase DB",
       "GIT",
-      "Adaptive and responsive coding",
-      "Firebase DB"
+      "Webpack",
+      "NPM",
+      "HTML",
+      "CSS",
+      "SASS",
+      "Adaptive and responsive coding"
     ]
   },
   {
     "type": "Soft",
     "bgColor": "white",
     "list": [
-      "Scrum",
+      "Responsibility",
       "Teamwork",
+      "Scrum",
       "Agile",
       "Perseverance",
       "GTD",
+      "Willingness to Learn",
       "Desire to develop"
     ]
   }
